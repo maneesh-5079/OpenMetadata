@@ -280,7 +280,7 @@ SNOWFLAKE_LIFE_CYCLE_QUERY = textwrap.dedent(
 select
 table_name as table_name,
 created as created_at
-from snowflake.account_usage.tables
+from {database_name}.information_schema.tables
 where table_schema = '{schema_name}'
 and table_catalog = '{database_name}'
 """
